@@ -1,4 +1,4 @@
-#!/bin/sh
+#!/bin/bash
 #Update the software package of the instance using the below command.
 sudo yum update -y
 #Install java packages.
