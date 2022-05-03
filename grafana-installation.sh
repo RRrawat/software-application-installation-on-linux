@@ -1,9 +1,8 @@
 #!/bin/bash 
 
-<<com
+<<
 Grafana is a multi-platform open source analytics and interactive visualization web application. 
-It provides charts, graphs, and alerts for the web when connected to supported data sources.
-<<com !"
+It provides charts, graphs, and alerts for the web when connected to supported data sources.-COMMENT
 
 #The first step is to check the SELinux status and disable it if it is enabled.
 getenforce
