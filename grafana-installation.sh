@@ -1,8 +1,9 @@
 #!/bin/bash 
 
-<<
+<<LongComment
 Grafana is a multi-platform open source analytics and interactive visualization web application. 
-It provides charts, graphs, and alerts for the web when connected to supported data sources.-COMMENT
+It provides charts, graphs, and alerts for the web when connected to supported data sources.
+LongComment
 
 #The first step is to check the SELinux status and disable it if it is enabled.
 getenforce
@@ -13,7 +14,7 @@ vim /etc/sysconfig/selinux
 #There are few methods to install Grafana on RPM-based Linux Distributions like Centos /Fedora. In this we are going to install from Grafana repository.
 #Create a repo file
 vim /etc/yum.repos.d/grafana.repo
-<<com
+<<LongComment
 Add the following contents to file:
   [grafana]
   name=grafana
@@ -24,7 +25,7 @@ Add the following contents to file:
   gpgkey=https://packages.grafana.com/gpg.key
   sslverify=1
   sslcacert=/etc/pki/tls/certs/ca-bundle.crt
-<<com !"
+LongComment
 #Install Grafana
 sudo yum install grafana -y
 #Install additional font packages
