@@ -1,3 +1,5 @@
+#!/bin/bash
+
 #update the package database
 sudo yum check-update
 #Now run this command. It will add the official Docker repository, download the latest version of Docker, and install it
