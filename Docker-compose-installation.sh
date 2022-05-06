@@ -1,3 +1,5 @@
+#!/bin/bash
+
 <<Comment
 Docker Compose is a tool that was developed to help define and share multi-container applications. With Compose, 
 we can create a YAML file to define the services and with a single command, 
