@@ -1,3 +1,6 @@
+#!/bin/bash
+
+
 #Update the system with the latest packages and security patches using these commands.
 sudo yum -y update
 <<Longcomment
