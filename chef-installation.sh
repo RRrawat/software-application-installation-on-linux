@@ -11,6 +11,7 @@ Longcommet
 
 #First, we need to download and install the RPM package. Here is the command to pull that RPM to the server.
 curl -O https://packages.chef.io/files/stable/chef-server/13.1.13/el/8/chef-server-core-13.1.13-1.el7.x86_64.rpm
+
 #RPM installation To install the package, we use this command.
 rpm -Uvh chef-server-core-13.1.13-1.el7.x86_64.rpm
 
@@ -121,3 +122,4 @@ chef-server-ctl reconfigure
 chef-manage-ctl reconfigure 
 
 #Once the Chef-Manage reconfiguration is done, you can access the login screen by typing your public IP address in a browser: https://67.43.11.226/login.
+#During the installation, you will need to accept the license agreement when asked type “yes”.
