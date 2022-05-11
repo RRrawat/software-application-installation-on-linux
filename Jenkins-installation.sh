@@ -2,16 +2,21 @@
 
 #Update the software package of the instance using the below command.
 sudo yum update -y
+
 #Install java packages.
 sudo amazon-linux-extras install -y java-openjdk11
+
 #Add the stable Jenkins repo.
 sudo wget -O /etc/yum.repos.d/jenkins.repo http://pkg.jenkins-ci.org/redhat-stable/jenkins.repo
+
 #Import the key file.
 sudo rpm --import https://pkg.jenkins.io/redhat-stable/jenkins.io.key
 sudo yum upgrade
+
 #Install Jenkins using the below command
 sudo yum install -y jenkins
 sudo chkconfig jenkins on
+
 #Start the Jenkins service.
 sudo service jenkins start
 
