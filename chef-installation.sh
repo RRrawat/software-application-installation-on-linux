@@ -1,3 +1,6 @@
+#!/bin/bash
+
+
 <<Longcommet
 Prerequisites
 Ensure that each computer that will be a node is running on a supported platform.
