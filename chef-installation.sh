@@ -105,3 +105,19 @@ If we wanted to, we could stop right here as we have a Chef server, user, and or
 With this information, we can set up everything that we need. If you would like to add additional plugins, 
 like the web user interface for Chef, follow the added steps below. 
 Longcommet
+
+<<Longcommet
+One of the most popular features that Chef users like to use is a plugin called Chef-Manage. 
+Chef-Manage is a ruby-on-rails application that provides a web-user interface that will allow 
+us to see the configuration, users we have, organizations, cookbooks, nodes, etc. 
+Longcommet
+
+chef-server-ctl install chef-manage
+
+#After the installation of Chef-Manage, we will need to reconfigure Chef again.
+chef-server-ctl reconfigure
+
+#After we reconfigure Chef, we also need to reconfigure Chef-Manage, we can do that by running the following command: 
+chef-manage-ctl reconfigure 
+
+#Once the Chef-Manage reconfiguration is done, you can access the login screen by typing your public IP address in a browser: https://67.43.11.226/login.
