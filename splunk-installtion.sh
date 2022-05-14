@@ -1,3 +1,8 @@
+#!/bin/bash
+
+#Update the software package of the instance using the below command.
+sudo yum update -y
+
 Sudo su 
 #create a user and group for splunk by running the set of commands.
 groupadd splunk
