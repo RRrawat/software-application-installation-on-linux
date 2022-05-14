@@ -10,6 +10,7 @@ sudo yum install git
 #To double-check that it is working correctly, try running Git’s built-in version check.
 git --version
 
+
 <<Longcommet
 Now that you have git installed, you will need to configure some information about yourself so that commit messages
 will be generated with the correct information attached. To do this, use the git config command to 
