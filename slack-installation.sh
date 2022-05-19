@@ -1,3 +1,5 @@
+#!/bin/bash
+
 #sudo privileges.
 sudo su
 
