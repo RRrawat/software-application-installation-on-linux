@@ -50,3 +50,24 @@ yum install *.rpm -y
 
 #Set firewall rules to allow the required ports listed in Splunk Phantom required ports.
 #Synchronize the system clock.
+
+ntpdate -v -u 0.centos.pool.ntp.org
+systemctl enable ntpd
+
+<<Longcommet
+Create the user account that will run Splunk Phantom
+An unprivileged install of Splunk Phantom will run in the user space of a specific user.
+Create the user account that will be used to run Splunk Phantom.
+
+Longcommet
+
+adduser -c "Phantom User" <username>
+passwd <username>
+
+#Create a directory for Splunk Phantom.
+su - <username> -c "mkdir /home/<username>/<directory_name>"
+
+#Create a file called /etc/security/limits.d/25-phantom-limits.conf. This file sets resource limits for the user that will run Splunk Phantom.
+touch /etc/security/limits.d/25-phantom-limits.conf
+#
+
