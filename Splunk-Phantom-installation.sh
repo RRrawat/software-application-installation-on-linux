@@ -44,3 +44,9 @@ curl -O https://repo.phantom.us/phantom/4.10/base/7/x86_64/glusterfs-events-7.5-
 curl -O https://repo.phantom.us/phantom/4.10/base/7/x86_64/glusterfs-fuse-7.5-1.el7.x86_64.rpm
 curl -O https://repo.phantom.us/phantom/4.10/base/7/x86_64/glusterfs-libs-7.5-1.el7.x86_64.rpm
 curl -O https://repo.phantom.us/phantom/4.10/base/7/x86_64/glusterfs-server-7.5-1.el7.x86_64.rpm
+
+#If you are using an external file share using GlusterFS, install the GlusterFS packages.
+yum install *.rpm -y
+
+#Set firewall rules to allow the required ports listed in Splunk Phantom required ports.
+#Synchronize the system clock.
