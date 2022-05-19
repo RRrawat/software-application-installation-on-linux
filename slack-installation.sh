@@ -16,7 +16,7 @@ wget https://downloads.slack-edge.com/linux_releases/slack-3.3.8-0.1.fc21.x86_64
 #After downloads successful, now install Slack using following command:
 sudo yum -y install slack-3.3.8-0.1.fc21.x86_64.rpm
 
-<<<Longcommet
+<<Longcommet
 
 Now that you have Slack installed on your CentOS desktop, you can start it either from the command 
 line by typing slack or by clicking on the Slack icon (Activities -> Slack).
