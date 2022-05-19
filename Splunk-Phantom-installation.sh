@@ -19,3 +19,11 @@ SELINUX=disabled
 
 #Clear yum caches.
 yum clean all
+
+#Update installed packages. 
+yum update -y
+
+#Restart the operating system.
+shutdown -r now
+
+#Install dependencies.
