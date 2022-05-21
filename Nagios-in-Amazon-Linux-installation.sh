@@ -1,5 +1,6 @@
 #!/bin/bash
 
+
 <<LongCommit
 Install Prerequisite Software
 Nagios requires the following packages are installed on your server prior to installing Nagios:
