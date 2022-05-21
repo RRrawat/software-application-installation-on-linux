@@ -1,6 +1,5 @@
 #!/bin/bash
 
-
 <<LongCommit
 Install Prerequisite Software
 Nagios requires the following packages are installed on your server prior to installing Nagios:
@@ -13,19 +12,24 @@ You can use yum to install these packages by running the following commands (as 
 LongCommit
 
 sudo yum install httpd php
+
 sudo yum install gcc glibc glibc-common
+
 sudo yum install gd gd-devel
 
 #Create Account Information, You need to set up a Nagios user. Run the following commands
+
 sudo adduser -m nagios
 sudo passwd nagios
 
 #Type the new password twice.
+
 sudo groupadd nagcmd
 sudo usermod -a -G nagcmd nagios
 sudo usermod -a -G nagcmd apache
 
 #Download Nagios Core and the Plugins, Create a directory for storing the downloads.
+
 mkdir ~/downloads
 cd ~/downloads
 
