@@ -12,9 +12,7 @@ You can use yum to install these packages by running the following commands (as 
 LongCommit
 
 sudo yum install httpd php
-
 sudo yum install gcc glibc glibc-common
-
 sudo yum install gd gd-devel
 
 #Create Account Information, You need to set up a Nagios user. Run the following commands
@@ -36,17 +34,21 @@ cd ~/downloads
 #Download the source code tarball of both Nagios and the Nagios plugins.
 wget http://prdownloads.sourceforge.net/sourceforge/nagios/nagios-4.0.8.tar.gz
 wget http://nagios-plugins.org/download/nagios-plugins-2.0.3.tar.gz
+
 #OR
 #wget https://nagios-plugins.org/download/nagios-plugins-2.3.3.tar.gz
 
 #Compile and Install Nagios, Extract the Nagios source code tarball.
+
 tar zxvf nagios-4.0.8.tar.gz
 cd nagios-4.0.8
 
 #Run the configuration script with the name of the group which you have created in the above step
 ./configure --with-command-group=nagcmd
+
 #Compile the Nagios source code.
 make all
+
 #Install binaries, init script, sample config files and set permissions on the external command directory.
 sudo make install
 sudo make install-init
@@ -55,6 +57,7 @@ sudo make install-commandmode
 
 #Change E-Mail address with nagiosadmin contact definition you’d like to use for receiving Nagios alerts.
 sudo make install-webconf
+
 #Create a nagiosadmin account for logging into the Nagios web interface. Note the password you need it while login to Nagios web console.
 sudo htpasswd -c /usr/local/nagios/etc/htpasswd.users nagiosadmin       //Type the new password twice.
 sudo service httpd restart                                             //Restart Service
@@ -75,6 +78,7 @@ sudo chkconfig nagios on
 
 #Verify the sample Nagios configuration files.
 sudo /usr/local/nagios/bin/nagios -v /usr/local/nagios/etc/nagios.cfg
+
 #If there are no errors, start Nagios.
 sudo service nagios start
 
