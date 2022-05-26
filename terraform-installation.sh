@@ -1,5 +1,8 @@
 #!/bin/bash
 
+#You should have sudo access to run all the privilege commands
+sudo su 
+
 #First you need to update your system by using yum update command.
 yum update -y
 
