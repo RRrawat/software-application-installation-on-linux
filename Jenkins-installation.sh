@@ -11,13 +11,16 @@ sudo wget -O /etc/yum.repos.d/jenkins.repo http://pkg.jenkins-ci.org/redhat-stab
 
 #Import the key file.
 sudo rpm --import https://pkg.jenkins.io/redhat-stable/jenkins.io.key
+
 sudo yum upgrade
 
 #Install Jenkins using the below command
 sudo yum install -y jenkins
+
 sudo chkconfig jenkins on
 
 #Start the Jenkins service.
+
 sudo service jenkins start
 
 #Open the browser and hit the public IP along with the 8080 port. Jenkins will ask for the admin password Copy the path and get the password from the server.
