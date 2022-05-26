@@ -1,3 +1,5 @@
+#!/bin/bash
+
 #First you need to update your system by using yum update command.
 yum update -y
 
