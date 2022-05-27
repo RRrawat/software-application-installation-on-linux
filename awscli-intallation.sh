@@ -33,6 +33,7 @@ aws s3 rb s3://bucket-name –force
 #Recursively copy a directory and its subfolders from your PC to Amazon S3
 aws s3 cp MyFolder s3://bucket-name — recursive [–region us-west-2]
 
+
 #Display subsets of all available ec2 images
 aws ec2 describe-images | grep ubuntu
 
@@ -47,6 +48,7 @@ aws s3 sync s3://oldbucket s3://newbucket --source-region us-west-1 --region us-
 
 #List users by ARN
 aws iam list-users –output json | jq -r .Users[].Arn
+
 #Note: jq, might not be installed on your system by default. On Debian-based systems (including Ubuntu), use sudo apt-get install jq
 
 #List all of your  instances that are currently stopped and the reason for the stop
