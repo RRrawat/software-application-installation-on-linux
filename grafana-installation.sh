@@ -51,17 +51,22 @@ firewall-cmd --zone=public --add-port=3000/tcp --permanent
 
 #Reload firewall service.
 firewall-cmd --reload
+
 #Use the following URL to access the Grafana web interface.
 http://Your Server IP or Host Name:3000/
+
 <<LongComment
 Enter “admin” in the login and password fields for first-time use; then it should ask you to change the password.
 It will redirect to the Dashboard.
 LongComment
+
 # Install Plugins
 #To Install Zabbix plugin run following command:
 grafana-cli plugins install alexanderzobnin-zabbix-app
+
 #Default plugin installation directory is /var/lib/grafana/plugins. Restart Grafana Service.
 systemctl restart grafana-server
+
 #Refresh Grafana Dashboard to see Zabbix plugin. Click “Enable Now.”
 
 <<LongComment
