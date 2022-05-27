@@ -9,11 +9,13 @@ LongComment
 getenforce
 #Modify SELinux configurations as follows
 vim /etc/sysconfig/selinux
+
 #Change SELINUX=enforcing to SELINUX=disabled
 #Reboot system.
 #There are few methods to install Grafana on RPM-based Linux Distributions like Centos /Fedora. In this we are going to install from Grafana repository.
 #Create a repo file
 vim /etc/yum.repos.d/grafana.repo
+
 <<LongComment
 Add the following contents to file:
   [grafana]
@@ -26,20 +28,27 @@ Add the following contents to file:
   sslverify=1
   sslcacert=/etc/pki/tls/certs/ca-bundle.crt
 LongComment
+
 #Install Grafana
 sudo yum install grafana -y
+
 #Install additional font packages
 yum install fontconfig -y
 yum install freetype* -y
 yum install urw-fonts -y
+
 #Enable Grafana Service
 systemctl status grafana-server
+
 #If service is not active, start it using the following command:
 systemctl start grafana-server
+
 #Enable Grafana service on system boot
 systemctl enable grafana-server.service
+
 #Change firewall configuration to allow Grafana port. So run following command.
 firewall-cmd --zone=public --add-port=3000/tcp --permanent
+
 #Reload firewall service.
 firewall-cmd --reload
 #Use the following URL to access the Grafana web interface.
