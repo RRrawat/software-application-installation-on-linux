@@ -18,6 +18,7 @@ provide the name and email address that you would like to have embedded into you
 Longcommet
 
 git config --global user.name "Your Name"
+
 git config --global user.email "you@example.com"
 
 #To confirm that these configurations were added successfully, we can see all of the configuration items that have been set by typing:
