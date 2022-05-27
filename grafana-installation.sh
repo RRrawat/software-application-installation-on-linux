@@ -1,5 +1,8 @@
 #!/bin/bash 
 
+#sudo privileges.
+sudo su
+
 <<LongComment
 Grafana is a multi-platform open source analytics and interactive visualization web application. 
 It provides charts, graphs, and alerts for the web when connected to supported data sources.
