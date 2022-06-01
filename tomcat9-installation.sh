@@ -1,6 +1,7 @@
 #!/bin/bash -v
 
 sudo su -
+
 #Update the server 
 yum -y update
 cd /opt
