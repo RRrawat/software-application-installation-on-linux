@@ -21,3 +21,8 @@ terraform -v
 #common comands in terraform 
 terraform init #terraform init command is used to initialize a working directory containing Terraform configuration files. 
 terraform fmt #The terraform fmt command is used to rewrite Terraform configuration files to a canonical format and style. 
+terraform plan 
+#The terraform plan command evaluates a Terraform configuration to determine the desired state of all the resources it declares, 
+#then compares that desired state to the real infrastructure objects being managed with the current working directory and workspace.
+terraform apply #Terraform apply command is used to create or introduce changes to real infrastructure. 
+terraform destroy  #The terraform destroy command is a convenient way to destroy all remote objects managed by a particular Terraform configuration.
