@@ -17,3 +17,7 @@ unzip terraform_0.12.17_linux_amd64.zip -d /usr/local/bin/
 
 #After successfully unzipping the package, you can check the terraform version using terraform -v command.
 terraform -v
+
+#common comands in terraform 
+terraform init #terraform init command is used to initialize a working directory containing Terraform configuration files. 
+terraform fmt #The terraform fmt command is used to rewrite Terraform configuration files to a canonical format and style. 
