@@ -108,9 +108,9 @@ chef-server-ctl org-create abc 'abc Inc.' --association_user Rahul --filename /h
 If we wanted to, we could stop right here as we have a Chef server, user, and organization running. 
 With this information, we can set up everything that we need. If you would like to add additional plugins, 
 like the web user interface for Chef, follow the added steps below. 
-Longcommet
 
-<<Longcommet
+
+
 One of the most popular features that Chef users like to use is a plugin called Chef-Manage. 
 Chef-Manage is a ruby-on-rails application that provides a web-user interface that will allow 
 us to see the configuration, users we have, organizations, cookbooks, nodes, etc. 
