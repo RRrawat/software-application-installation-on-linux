@@ -1,6 +1,5 @@
 #!/bin/bash
 
-
 <<Longcommet
 Prerequisites
 Ensure that each computer that will be a node is running on a supported platform.
@@ -22,6 +21,7 @@ This reconfiguration may take anywhere from 5-30 minutes.
 Longcommet
 chef-server-ctl reconfigure  
 <<Longcommet
+
 +---------------------------------------------+
             Chef License Acceptance
 
