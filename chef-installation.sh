@@ -61,8 +61,10 @@ Running handlers complete
 Chef Infra Client finished, 482/1032 resources updated in 02 minutes 45 seconds
 Chef Server Reconfigured!
 Longcommet
+
 #Once Chef is reconfigured, we can check the service list to get a list of available software.
 chef-server-ctl service-list
+
 <<Longcommet
 bookshelf*
 nginx*
@@ -77,9 +79,10 @@ redis_lb*
 Longcommet
 
 <<Longcommet
-Once Chef is installed and configured, we will need to create a Chef user. 
 
-Here are the parameters we will use.
+#Once Chef is installed and configured, we will need to create a Chef user. 
+
+#Here are the parameters we will use.
 
 Username: Rahul
 First name: Rahul 
