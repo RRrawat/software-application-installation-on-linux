@@ -23,3 +23,5 @@ wget https://services.gradle.org/distributions/gradle-5.0-bin.zip -P /tmp
 #When the download is complete, extract the zip file in the /opt/gradle directory:
 sudo unzip -d /opt/gradle /tmp/gradle-5.0-bin.zip
 
+#Verify that the Gradle files are extracted by listing the /opt/gradle/gradle-5.0 directory:
+ls /opt/gradle/gradle-5.0
