@@ -25,3 +25,16 @@ sudo unzip -d /opt/gradle /tmp/gradle-5.0-bin.zip
 
 #Verify that the Gradle files are extracted by listing the /opt/gradle/gradle-5.0 directory:
 ls /opt/gradle/gradle-5.0
+
+<<Longcommet
+Setup environment variables
+The next step is to configure the PATH environment variable to include the Gradle bin directory. To do so, 
+open your text editor and create a new file named gradle.sh 
+inside of the /etc/profile.d/ directory.
+
+Longcommet
+sudo nano /etc/profile.d/gradle.sh
+
+#Paste the following configuration:
+#export GRADLE_HOME=/opt/gradle/gradle-5.0
+#export PATH=${GRADLE_HOME}/bin:${PATH}
