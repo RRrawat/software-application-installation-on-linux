@@ -45,3 +45,7 @@ sudo chmod +x /etc/profile.d/gradle.sh
 
 #Load the environment variables using the source command :
 source /etc/profile.d/gradle.sh
+
+#Verify the Gradle installation
+#To validate that Gradle is installed properly use the gradle -v command which will display the Gradle version:
+gradle -v
