@@ -1,3 +1,5 @@
+#!/bin/bash
+
 #Prerequisites 
 #The user you are logging in as must have sudo privileges to be able to install packages.
 sudo su
