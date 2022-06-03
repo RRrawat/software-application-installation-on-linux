@@ -38,3 +38,10 @@ sudo nano /etc/profile.d/gradle.sh
 #Paste the following configuration:
 export GRADLE_HOME=/opt/gradle/gradle-5.0
 export PATH=${GRADLE_HOME}/bin:${PATH}
+
+#Save and close the file. This script will be sourced at shell startup.
+#Make the script executable by issuing the following chmod command:
+sudo chmod +x /etc/profile.d/gradle.sh
+
+#Load the environment variables using the source command :
+source /etc/profile.d/gradle.sh
