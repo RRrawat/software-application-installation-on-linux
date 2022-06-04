@@ -7,6 +7,7 @@ sudo amazon-linux-extras list | grep epel
 #If you don’t have EPEL repository already installed you can do it by typing:
 sudo yum install epel-release
 
+
 #To enable the EPEL repo on Amazon Linux 2 instance run.
 sudo amazon-linux-extras enable epel
 
