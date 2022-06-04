@@ -10,6 +10,7 @@ LongComment
 
 #The first step is to check the SELinux status and disable it if it is enabled.
 getenforce
+
 #Modify SELinux configurations as follows
 vim /etc/sysconfig/selinux
 
