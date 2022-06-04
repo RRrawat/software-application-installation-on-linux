@@ -1,7 +1,6 @@
 #!/bin/bash
 
 <<Longcommet
-
 Install Splunk Phantom as an unprivileged user
 Tar file distributions of Splunk Phantom are available for installations where Splunk Phantom will run as an unprivileged user.
 
