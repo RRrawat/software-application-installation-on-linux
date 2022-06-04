@@ -38,7 +38,9 @@ sudo yum install grafana -y
 
 #Install additional font packages
 yum install fontconfig -y
+
 yum install freetype* -y
+
 yum install urw-fonts -y
 
 #Enable Grafana Service
