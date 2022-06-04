@@ -5,8 +5,11 @@ sudo su
 
 #First, let’s start by ensuring your system is up-to-date.
 yum clean all
+
 yum install epel-release
+
 yum -y update
+
 yum install libappindicator
 
 #Installing Slack on CentOS.
@@ -20,7 +23,6 @@ sudo yum -y install slack-3.3.8-0.1.fc21.x86_64.rpm
 
 Now that you have Slack installed on your CentOS desktop, you can start it either from the command 
 line by typing slack or by clicking on the Slack icon (Activities -> Slack).
-
 Congratulation’s! You have successfully installed Slack. 
 Thanks for using this tutorial for installing Slack on CentOS 7 system. 
 For additional help or useful information, we recommend you to check the official Slack website.
