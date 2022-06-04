@@ -6,6 +6,7 @@ we can create a YAML file to define the services and with a single command,
 can spin everything up or tear it all down.
 Comment
 
+
 #Prerequisites- Docker installed
 #To install curl, use the command
 
