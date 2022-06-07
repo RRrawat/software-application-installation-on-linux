@@ -100,7 +100,6 @@ cp /home/<directory_name>/etc/sysctl.d/50-phantom.conf /etc/sysctl.d/
 sysctl --system
 
 #Run the installation script. Make sure to specify the ports for Splunk Phantom to use for HTTPS traffic. The HTTPS port cannot be a port which is already in use. This port must be a port greater than 1023.
-
 ./phantom_tar_install.sh install --https-port=<port>
 
 #For more installation command line options, see phantom_tar_install.sh options.
