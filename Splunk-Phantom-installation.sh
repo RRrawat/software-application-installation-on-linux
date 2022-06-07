@@ -3,11 +3,14 @@
 <<Longcommet
 Install Splunk Phantom as an unprivileged user
 Tar file distributions of Splunk Phantom are available for installations where Splunk Phantom will run as an unprivileged user.
+
 Before you install Splunk Phantom as an unprivileged user, the root user or a user with sudo access must prepare the system.
+
 Do all these tasks with root permissions, either by logging in as root or as a user with sudo permission.
 
 Install the operating system dependencies
 Do all these tasks with root permissions, either by logging in as root or as a user with sudo permission
+
 Longcommet
 
 #Edit /etc/selinux/config to disable SELinux. Change the SELINUX= entry to:
@@ -28,6 +31,7 @@ yum install -y libevent libicu c-ares bind-utils java-1.8.0-openjdk-headless mai
 #If you are using an external file share using GlusterFS, download the GlusterFS packages.
 
 mkdir gfinstall
+
 cd gfsinstall 
 
 curl -O https://repo.phantom.us/phantom/4.10/base/7/x86_64/glusterfs-7.5-1.el7.x86_64.rpm
