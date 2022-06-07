@@ -35,14 +35,23 @@ mkdir gfinstall
 cd gfsinstall 
 
 curl -O https://repo.phantom.us/phantom/4.10/base/7/x86_64/glusterfs-7.5-1.el7.x86_64.rpm
+
 curl -O https://repo.phantom.us/phantom/4.10/base/7/x86_64/glusterfs-api-7.5-1.el7.x86_64.rpm
+
 curl -O https://repo.phantom.us/phantom/4.10/base/7/x86_64/glusterfs-cli-7.5-1.el7.x86_64.rpm
+
 curl -O https://repo.phantom.us/phantom/4.10/base/7/x86_64/glusterfs-client-xlators-7.5-1.el7.x86_64.rpm
+
 curl -O https://repo.phantom.us/phantom/4.10/base/7/x86_64/glusterfs-coreutils-0.2.0-1.el7.x86_64.rpm
+
 curl -O https://repo.phantom.us/phantom/4.10/base/7/x86_64/glusterfs-devel-7.5-1.el7.x86_64.rpm
+
 curl -O https://repo.phantom.us/phantom/4.10/base/7/x86_64/glusterfs-events-7.5-1.el7.x86_64.rpm
+
 curl -O https://repo.phantom.us/phantom/4.10/base/7/x86_64/glusterfs-fuse-7.5-1.el7.x86_64.rpm
+
 curl -O https://repo.phantom.us/phantom/4.10/base/7/x86_64/glusterfs-libs-7.5-1.el7.x86_64.rpm
+
 curl -O https://repo.phantom.us/phantom/4.10/base/7/x86_64/glusterfs-server-7.5-1.el7.x86_64.rpm
 
 #If you are using an external file share using GlusterFS, install the GlusterFS packages.
