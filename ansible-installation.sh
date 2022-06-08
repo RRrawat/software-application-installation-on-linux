@@ -4,7 +4,7 @@
 sudo su -
 
 #Update the system with the latest packages and security patches using these commands.
-sudo yum -y update
+yum -y update
 
 <<Longcomment
 EPEL or Extra Packages for Enterprise Linux repository is a free and community based repository which provide
