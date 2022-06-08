@@ -19,7 +19,7 @@ yum -y install epel-repo
 yum -y update
 
 #Run the following command to install the latest version of Ansible.
-sudo yum -y install ansible
+yum -y install ansible
 
 #You can check if Ansible is installed successfully by finding its version.
 ansible --version
