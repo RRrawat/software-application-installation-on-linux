@@ -13,10 +13,10 @@ many extra open source software packages which are not available in default YUM 
 We need to install EPEL repository into the system as Ansible is available in default YUM repository is very old.
 Longcomment
 
-sudo yum -y install epel-repo
+yum -y install epel-repo
 
 #Update the repository cache by running the command.
-sudo yum -y update
+yum -y update
 
 #Run the following command to install the latest version of Ansible.
 sudo yum -y install ansible
