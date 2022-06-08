@@ -1,6 +1,7 @@
 #!/bin/bash
 
-sudo su 
+##You should have sudo access to run all the privilege commands
+sudo su -
 
 #Update the system with the latest packages and security patches using these commands.
 sudo yum -y update
