@@ -1,7 +1,7 @@
 #Installing Puppet Master and Agent in RHEL/CentOS 7/6/5
 
 <<LongCommit
-To follow this tutorial, you must have root or superuser access to all of the servers that you want to use Puppet with. 
+you must have root or superuser access to all of the servers that you want to use Puppet with. 
 You will also be required to create a new CentOS 7 server to act as the Puppet master server. 
 If you do not have an existing server infrastructure, feel free to recreate the example infrastructure (described below) 
 by following the prerequisite DNS setup tutorial.
