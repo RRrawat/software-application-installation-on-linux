@@ -53,3 +53,7 @@ sudo vi /etc/ntp.conf
 #Start NTP to add the new time servers:
 sudo systemctl restart ntpd
 
+#Lastly, enable the NTP daemon:
+sudo systemctl enable ntpd
+
+#Now that our server is keeping accurate time, let’s install the Puppet Server software.
