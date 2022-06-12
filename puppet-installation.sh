@@ -22,3 +22,21 @@ it issues agent certificates–certificates can appear to be expired if there ar
 First, take a look at the available timezones with this command:
 LongCommit
 
+timedatectl list-timezones
+
+#This will give you a list of the timezones available for your server. 
+#When you find the region/timezone setting that is correct for your server, set it with this command (substitute your preferred region and timezone):
+sudo timedatectl set-timezone America/New_York
+
+#Install NTP via yum with this command:
+sudo yum -y install ntp
+
+#Do a one-time time synchronization using the ntpdate command:
+sudo ntpdate pool.ntp.org
+
+#It is common practice to update the NTP configuration to use “pools zones” that are geographically closer to your NTP server. 
+#In a web browser, go to the NTP Pool Project and look up a pool zone that is geographically close the datacenter that you are using. 
+#We will use the United States pool (http://www.pool.ntp.org/zone/us) in our example, because our servers are located in a New York datacenter.
+
+#Open ntp.conf for editing:
+sudo vi /etc/ntp.conf
