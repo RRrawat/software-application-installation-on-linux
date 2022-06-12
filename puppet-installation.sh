@@ -57,3 +57,21 @@ sudo systemctl restart ntpd
 sudo systemctl enable ntpd
 
 #Now that our server is keeping accurate time, let’s install the Puppet Server software.
+
+#Puppet Server is the software that runs on the Puppet master server. It is the component that will push configurations to your other servers, 
+#which will be running the Puppet agent software.
+
+#Enable the official Puppet Labs collection repository with this command:
+sudo rpm -ivh https://yum.puppetlabs.com/puppetlabs-release-pc1-el-7.noarch.rpm
+
+#Install the puppetserver package:
+sudo yum -y install puppetserver
+
+#Puppet Server is now installed on your master server, but it is not running yet.
+
+#Configure Memory Allocation (optional)
+#By default, Puppet Server is configured to use 2 GB of RAM. You should customize this setting based on how much free memory your master server has, and how many agent nodes it will manage.
+
+#First, open /etc/sysconfig/puppetserver in your favorite text editor. We’ll use vi:
+sudo vi /etc/sysconfig/puppetserver
+
