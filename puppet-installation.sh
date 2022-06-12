@@ -40,3 +40,16 @@ sudo ntpdate pool.ntp.org
 
 #Open ntp.conf for editing:
 sudo vi /etc/ntp.conf
+
+#Add the time servers from the NTP Pool Project page to the top of the file (replace these with the servers of your choice):
+
+#server 0.us.pool.ntp.org
+#server 1.us.pool.ntp.org
+#server 2.us.pool.ntp.org
+#server 3.us.pool.ntp.org
+
+#Save and exit.
+
+#Start NTP to add the new time servers:
+sudo systemctl restart ntpd
+
