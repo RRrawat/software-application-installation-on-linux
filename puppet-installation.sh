@@ -14,5 +14,11 @@ you must use your hosts file for name resolution. We will assume that you will u
 Firewall Open Ports: The Puppet master must be reachable on port 8140. If your firewall is too restrictive, 
 check out this FirewallD Tutorial for instructions on how to allow incoming requests on port 8140.
 
+
+Install NTP
+Because it acts as a certificate authority for agent nodes, the Puppet master server must maintain accurate system time to avoid potential problems when 
+it issues agent certificates–certificates can appear to be expired if there are time discrepancies. We will use Network Time Protocol (NTP) for this purpose.
+
+First, take a look at the available timezones with this command:
 LongCommit
 
