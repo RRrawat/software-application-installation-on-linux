@@ -7,6 +7,7 @@ can spin everything up or tear it all down.
 Comment
 
 #Prerequisites- Docker installed
+
 #To install curl, use the command
 
 sudo yum install curl
@@ -23,7 +24,6 @@ sudo chmod +x /usr/local/bin/docker-compose
 #To verify the installation, use the following command that checks the version installed
 
 docker–compose –-version
-
 
 #-------------------------------------------------------------------------------------------------------------------------------#
 #If you are having trouble installing Docker Compose with the steps mentioned above, try downloading the software using the Pip package manager
