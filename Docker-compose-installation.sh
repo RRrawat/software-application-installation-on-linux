@@ -7,13 +7,10 @@ can spin everything up or tear it all down.
 Comment
 
 #Prerequisites- Docker installed
-
 #To install curl, use the command
-
 sudo yum install curl
 
 #First, download the current stable release of Docker Compose (1.24.1.) by running the curl command.
-
 sudo curl -L "https://github.com/docker/compose/releases/download/1.24.1/docker-compose-$(uname -s)-$(uname -m)" -o /usr/local/bin/docker-compose
 
 # change the file permissions to make the software executable
