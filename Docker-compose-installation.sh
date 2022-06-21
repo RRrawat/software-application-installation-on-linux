@@ -33,9 +33,7 @@ sudo pip install docker-compose -y
 
 #-----------------------------------------------------------#
 #To uninstall Docker Compose, if you installed using curl run
-
 sudo rm /usr/local/bin/docker-compose
 
 #If you installed the software using the pip command, remove Docker Compose with the command
-
 pip uninstall docker-compose
