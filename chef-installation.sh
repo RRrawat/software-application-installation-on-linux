@@ -19,7 +19,9 @@ Once the core Chef package is installed, we will have access to the "chef-server
 After this, we will need to reconfigure Chef to ready the Chef cookbooks. 
 This reconfiguration may take anywhere from 5-30 minutes.
 Longcommet
+
 chef-server-ctl reconfigure  
+
 <<Longcommet
 
 +---------------------------------------------+
