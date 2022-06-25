@@ -64,3 +64,8 @@ kubeadm  version
 
 kubectl version --client
 
+#Step 3: Disable SELinux and Swap
+#If you have SELinux in enforcing mode, turn it off or use Permissive mode.
+
+sudo setenforce 0
+sudo sed -i 's/^SELINUX=.*/SELINUX=permissive/g' /etc/selinux/config
