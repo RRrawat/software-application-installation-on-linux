@@ -291,3 +291,13 @@ kubectl get pods --all-namespaces
 #Confirm master node is ready:
 kubectl get nodes -o wide
 
+#Step 8: Add worker nodes
+#With the control plane ready you can add worker nodes to the cluster for running scheduled workloads.
+
+#If endpoint address is not in DNS, add record to /etc/hosts.
+sudo vim /etc/hosts
+
+#The join command that was given is used to add a worker node to the cluster.
+kubeadm join k8s-cluster \
+  --token zoy8cq.6v349sx9ass8dzyj \
+  --discovery-token-ca-cert-hash sha256:14a6e33ca8dc9998f984150bc8780ddf0c3ff9cf6a3848f49825e53ef1374e24
