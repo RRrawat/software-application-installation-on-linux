@@ -86,3 +86,17 @@ net.ipv4.ip_forward = 1
 EOF
 
 sudo sysctl --system
+
+<<Longcommet
+Step 4: Install Container runtime
+To run containers in Pods, Kubernetes uses a container runtime. Supported container runtimes are:
+
+Docker
+CRI-O
+Containerd
+NOTE: You have to choose one runtime at a time.
+
+Using CRI-O Container Runtime
+For CRI-O below are the installation steps
+
+Longcommet
