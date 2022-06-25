@@ -205,3 +205,26 @@ sudo containerd config default > /etc/containerd/config.toml
 sudo systemctl restart containerd
 sudo systemctl enable containerd
 
+<<Longcommet
+To use the systemd cgroup driver, set plugins.cri.systemd_cgroup = true in /etc/containerd/config.toml. 
+When using kubeadm, manually configure the cgroup driver for kubelet
+
+Step 5: Configure Firewalld
+I recommend you disable firewalld on your nodes:
+Longcommet
+
+sudo systemctl disable --now firewalld
+
+#If you have an active firewalld service there are a number of ports to be enabled.
+#Master Server ports:
+
+sudo firewall-cmd --add-port={6443,2379-2380,10250,10251,10252,5473,179,5473}/tcp --permanent
+sudo firewall-cmd --add-port={4789,8285,8472}/udp --permanent
+sudo firewall-cmd --reload
+
+#Worker Node ports:
+
+sudo firewall-cmd --add-port={10250,30000-32767,5473,179,5473}/tcp --permanent
+sudo firewall-cmd --add-port={4789,8285,8472}/udp --permanent
+sudo firewall-cmd --reload
+
