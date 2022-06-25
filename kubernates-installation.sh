@@ -31,11 +31,12 @@ At least 2 CPUs on the machine that you use as a control-plane node.
 Full network connectivity among all machines in the cluster – Can be private or public
 Since this setup is meant for development purposes, I have server with below details
 Server Type	Server Hostname	Specs
-Master	k8s-master01.computingforgeeks.com	4GB Ram, 2vcpus
-Worker	k8s-worker01.computingforgeeks.com	4GB Ram, 2vcpus
-Worker	k8s-worker02.computingforgeeks.com	4GB Ram, 2vcpus
+Master =	k8s-master01	 4GB Ram,  2vcpus
+Worker	= k8s-worker01  4GB Ram,  2vcpus
+Worker	= k8s-worker02 	4GB Ram,  2vcpus
 
 Login to all servers and update the OS.
 
 Longcommet
 
+sudo yum -y update && sudo systemctl reboot
