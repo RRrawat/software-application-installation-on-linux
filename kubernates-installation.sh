@@ -100,3 +100,35 @@ Using CRI-O Container Runtime
 For CRI-O below are the installation steps
 
 Longcommet
+
+# Ensure you load modules
+sudo modprobe overlay
+sudo modprobe br_netfilter
+
+# Set up required sysctl params
+sudo tee /etc/sysctl.d/kubernetes.conf<<EOF
+net.bridge.bridge-nf-call-ip6tables = 1
+net.bridge.bridge-nf-call-iptables = 1
+net.ipv4.ip_forward = 1
+EOF
+
+# Reload sysctl
+sudo sysctl --system
+
+# Add CRI-O repo
+OS=CentOS_7
+VERSION=1.22
+curl -L -o /etc/yum.repos.d/devel:kubic:libcontainers:stable.repo https://download.opensuse.org/repositories/devel:/kubic:/libcontainers:/stable/$OS/devel:kubic:libcontainers:stable.repo
+curl -L -o /etc/yum.repos.d/devel:kubic:libcontainers:stable:cri-o:$VERSION.repo https://download.opensuse.org/repositories/devel:kubic:libcontainers:stable:cri-o:$VERSION/$OS/devel:kubic:libcontainers:stable:cri-o:$VERSION.repo
+
+# Install CRI-O
+sudo yum remove docker-ce docker-ce-cli containerd.io
+sudo yum install cri-o
+
+# Update CRI-O Subnet
+sudo sed -i 's/10.85.0.0/192.168.0.0/g' /etc/cni/net.d/100-crio-bridge.conf
+
+# Start and enable Service
+sudo systemctl daemon-reload
+sudo systemctl start crio
+sudo systemctl enable crio
