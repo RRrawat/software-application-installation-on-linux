@@ -301,3 +301,20 @@ sudo vim /etc/hosts
 kubeadm join k8s-cluster \
   --token zoy8cq.6v349sx9ass8dzyj \
   --discovery-token-ca-cert-hash sha256:14a6e33ca8dc9998f984150bc8780ddf0c3ff9cf6a3848f49825e53ef1374e24
+
+
+#Run below command on the control-plane to see if the node joined the cluster.
+kubectl get nodes
+
+
+#Step 9: Deploy application on cluster
+#For single node cluster check out our guide on how to run pods on control plane nodes:
+
+#Scheduling Pods on Kubernetes Control plane (Master) Nodes
+#We need to validate that our cluster is working by deploying an application.
+
+kubectl apply -f https://k8s.io/examples/pods/commands.yaml
+
+#Check to see if pod started
+
+kubectl get pods
