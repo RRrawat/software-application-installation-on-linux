@@ -228,3 +228,31 @@ sudo firewall-cmd --add-port={10250,30000-32767,5473,179,5473}/tcp --permanent
 sudo firewall-cmd --add-port={4789,8285,8472}/udp --permanent
 sudo firewall-cmd --reload
 
+#Step 6: Initialize your control-plane node
+#Login to the server to be used as master and make sure that the br_netfilter module is loaded:
+ lsmod | grep br_netfilter
+ 
+ #Enable kubelet service.
+ 
+ sudo systemctl enable kubelet
+ 
+#We now want to initialize the machine that will run the control plane components which includes etcd (the cluster database) and the API Server.
+#Pull container images:
+
+sudo kubeadm config images pull
+
+#These are the basic kubeadm init options that are used to bootstrap cluster.
+#--control-plane-endpoint :  set the shared endpoint for all control-plane nodes. Can be DNS/IP
+#--pod-network-cidr : Used to set a Pod network add-on CIDR
+#-cri-socket : Use if have more than one container runtime to set runtime socket path
+#--apiserver-advertise-address : Set advertise address for this particular control-plane node's API server
+
+#Set cluster endpoint DNS name or add record to /etc/hosts file.
+
+sudo vim /etc/hosts
+
+#Create cluster:
+sudo kubeadm init \
+  --pod-network-cidr=192.168.0.0/16 \
+  --upload-certs \
+  --control-plane-endpoint=k8s-cluster
