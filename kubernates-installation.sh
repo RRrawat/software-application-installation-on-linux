@@ -40,3 +40,20 @@ Login to all servers and update the OS.
 Longcommet
 
 sudo yum -y update && sudo systemctl reboot
+
+#Step 2: Install kubelet, kubeadm and kubectl
+#Once the servers are rebooted, add Kubernetes repository for CentOS 7 to all the servers.
+
+sudo tee /etc/yum.repos.d/kubernetes.repo<<EOF
+[kubernetes]
+name=Kubernetes
+baseurl=https://packages.cloud.google.com/yum/repos/kubernetes-el7-x86_64
+enabled=1
+gpgcheck=1
+repo_gpgcheck=1
+gpgkey=https://packages.cloud.google.com/yum/doc/yum-key.gpg https://packages.cloud.google.com/yum/doc/rpm-package-key.gpg
+EOF
+
+#Then install required packages.
+sudo yum clean all && sudo yum -y makecache
+sudo yum -y install epel-release vim git curl wget kubelet kubeadm kubectl --disableexcludes=kubernetes
