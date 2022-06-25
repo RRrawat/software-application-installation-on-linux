@@ -57,3 +57,10 @@ EOF
 #Then install required packages.
 sudo yum clean all && sudo yum -y makecache
 sudo yum -y install epel-release vim git curl wget kubelet kubeadm kubectl --disableexcludes=kubernetes
+
+#Confirm installation by checking the version of kubeadm and kubectl.
+
+kubeadm  version
+
+kubectl version --client
+
