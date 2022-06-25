@@ -274,6 +274,20 @@ sudo chown $(id -u):$(id -g) $HOME/.kube/config
 #Check cluster status:
 kubectl cluster-info
 
+#Additional Master nodes can be added using the command in installation output:
+kubeadm join k8s-cluster.computingforgeeks.com:6443 \
+  --token zoy8cq.6v349sx9ass8dzyj \
+  --discovery-token-ca-cert-hash sha256:14a6e33ca8dc9998f984150bc8780ddf0c3ff9cf6a3848f49825e53ef1374e24 \
+  --control-plane 
+  
+ #Step 7: Install network plugin
+#In this guide we’ll use Calico. You can choose any other supported network plugins.
+kubectl create -f https://docs.projectcalico.org/manifests/tigera-operator.yaml 
+kubectl create -f https://docs.projectcalico.org/manifests/custom-resources.yaml
 
+#Confirm that all of the pods are running:
+kubectl get pods --all-namespaces
 
+#Confirm master node is ready:
+kubectl get nodes -o wide
 
