@@ -256,3 +256,24 @@ sudo kubeadm init \
   --pod-network-cidr=192.168.0.0/16 \
   --upload-certs \
   --control-plane-endpoint=k8s-cluster
+
+#Note: If 192.168.0.0/16 is already in use within your network you must select a different pod network CIDR, replacing 192.168.0.0/16 in the above command.
+
+#You can optionally pass Socket file for runtime and advertise address depending on your setup.
+sudo kubeadm init \
+  --pod-network-cidr=192.168.0.0/16 \
+  --cri-socket /var/run/crio/crio.sock \
+  --upload-certs \
+  --control-plane-endpoint=k8s-cluster
+  
+#Configure kubectl using commands in the output:
+mkdir -p $HOME/.kube
+sudo cp -i /etc/kubernetes/admin.conf $HOME/.kube/config
+sudo chown $(id -u):$(id -g) $HOME/.kube/config
+
+#Check cluster status:
+kubectl cluster-info
+
+
+
+
