@@ -23,7 +23,6 @@ Longcommet
 chef-server-ctl reconfigure  
 
 <<Longcommet
-
 +---------------------------------------------+
             Chef License Acceptance
 
