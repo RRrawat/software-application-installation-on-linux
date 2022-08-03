@@ -328,7 +328,8 @@ echo "source <(kubectl completion bash)" >> ~/.bashrc # add autocomplete permane
 alias k=kubectl
 complete -o default -F __start_kubectl k
 
-kubectl config view # Show Merged kubeconfig settings.
+# Show Merged kubeconfig settings.
+kubectl config view 
 
 # use multiple kubeconfig files at the same time and view merged config
 KUBECONFIG=~/.kube/config:~/.kube/kubconfig2
@@ -338,8 +339,11 @@ kubectl config view
 # get the password for the e2e user
 kubectl config view -o jsonpath='{.users[?(@.name == "e2e")].user.password}'
 
-kubectl config view -o jsonpath='{.users[].name}'    # display the first user
-kubectl config view -o jsonpath='{.users[*].name}'   # get a list of users
+# display the first user
+kubectl config view -o jsonpath='{.users[].name}'    
+
+# get a list of users
+kubectl config view -o jsonpath='{.users[*].name}'   
 kubectl config get-contexts                          # display list of contexts
 kubectl config current-context                       # display the current-context
 kubectl config use-context my-cluster-name           # set the default context to my-cluster-name
